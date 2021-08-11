@@ -67,7 +67,7 @@ The Transaction hash is:
 ![Class Diagram 2](images/class1.png)
 ![Class Diagram 1](images/class2.png)
 
-# Libraraies
+# Libraries
 The only library I used was Roles.sol which was the parent class of all the Roles contracts. This was provided in the sample code.
 
 # DAPP Overview 
