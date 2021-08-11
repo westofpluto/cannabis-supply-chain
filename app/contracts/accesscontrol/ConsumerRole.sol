@@ -1,0 +1,50 @@
+pragma solidity ^0.5.16;
+
+//
+// Import the Roles library 
+//
+import "./Roles.sol";
+
+contract ConsumerRole {
+  using Roles for Roles.Role;
+
+  //
+  // Events
+  //
+  event ConsumerAdded(address indexed account);
+  event ConsumerRemoved(address indexed account);
+
+  Roles.Role private consumers;
+
+  constructor() public {
+    _addConsumer(msg.sender);
+  }
+
+  modifier onlyConsumer() {
+    require(isConsumer(msg.sender));
+    _;
+  }
+
+  function isConsumer(address account) public view returns (bool) {
+    return consumers.has(account);
+  }
+
+  function addConsumer(address account) public onlyConsumer {
+    _addConsumer(account);
+  }
+
+  function removeConsumer() public {
+    _removeConsumer(msg.sender);
+  }
+
+  function _addConsumer(address account) internal {
+    consumers.add(account);
+    emit ConsumerAdded(account);
+  }
+
+  function _removeConsumer(address account) internal {
+    consumers.remove(account);
+    emit ConsumerRemoved(account);
+  }
+}
+
