@@ -3,6 +3,7 @@
 app/.secret
 app/.secret2
 app/.infuraKey
+app/node_modules
 
 # Logs
 logs
