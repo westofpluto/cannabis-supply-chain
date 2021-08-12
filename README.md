@@ -68,7 +68,11 @@ The Transaction hash is:
 ![Class Diagram 1](images/class2.png)
 
 # Libraries
-The only library I used was Roles.sol which was the parent class of all the Roles contracts. This was provided in the sample code.
+I used the web3 library because it is the standard library making it possible to interact with a 
+local or remote Ethereum node. The web UI in the project uses the web3 Javascript library implementation to enable
+us to interact with the deployed supply chain contracts. 
+The only other library I used was Roles.sol which was the parent class of all the Roles contracts. 
+This was provided in the sample code. Note that I did not use IPFS in this project.
 
 # DAPP Overview 
 
@@ -88,7 +92,7 @@ To run this code you will need the following installed
 - Truffle 0.5
 - Metamask
 - An account on Infura and a created Infura project
-- Note: I did not use IPFS in this project
+- Note: I did NOT use IPFS in this project
 
 # Installation and Setup
 
@@ -346,7 +350,6 @@ npm run dev
 ## Built With
 
 * [Ethereum](https://www.ethereum.org/) - Ethereum is a decentralized platform that runs smart contracts
-* [IPFS](https://ipfs.io/) - IPFS is the Distributed Web | A peer-to-peer hypermedia protocol
 to make the web faster, safer, and more open.
 * [Truffle Framework](http://truffleframework.com/) - Truffle is the most popular development framework for Ethereum with a mission to make your life a whole lot easier.
 
@@ -360,4 +363,3 @@ See also the list of [contributors](contributors.md) who participated in this pr
 * Solidity
 * Ganache-cli
 * Truffle
-* IPFS

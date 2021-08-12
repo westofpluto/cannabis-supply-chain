@@ -1,9 +1,9 @@
 # .secret file removed for security reasons
 .secret
-app/.secret
-app/.secret2
-app/.infuraKey
-app/node_modules
+**/.secret
+**/.secret2
+**/.infuraKey
+**/node_modules
 
 # Logs
 logs
