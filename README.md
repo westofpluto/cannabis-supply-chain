@@ -69,7 +69,9 @@ The Transaction hash is:
 
 # Libraries
 I used the web3 library because it is the standard library making it possible to interact with a 
-local or remote Ethereum node. The web UI in the project uses the web3 Javascript library implementation to enable
+local or remote Ethereum node using HTTP and/or RPC. This library is described in more 
+detail [here](https://web3js.readthedocs.io/en/v1.4.0/).
+The web UI in the project uses the web3 Javascript library implementation to enable
 us to interact with the deployed supply chain contracts. 
 The only other library I used was Roles.sol which was the parent class of all the Roles contracts. 
 This was provided in the sample code. Note that I did not use IPFS in this project.
